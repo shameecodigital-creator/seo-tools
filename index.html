@@ -3,50 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meta Title Generator | Shameeco</title>
+<title>Shameeco SEO Tools</title>
 
 <style>
 body{
-    font-family:Arial, sans-serif;
+    margin:0;
+    font-family:Arial,sans-serif;
     background:#141414;
-    color:white;
-    max-width:900px;
+    color:#fff;
+}
+
+.container{
+    max-width:1200px;
     margin:auto;
-    padding:40px;
+    padding:50px 20px;
 }
 
 h1{
+    text-align:center;
     color:#FF6B00;
+    margin-bottom:10px;
 }
 
-input,textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #333;
-    border-radius:5px;
-    font-size:16px;
+.subtitle{
+    text-align:center;
+    color:#bbb;
+    margin-bottom:40px;
 }
 
-button{
-    background:#FF6B00;
-    color:white;
-    padding:12px 25px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-button:hover{
-    opacity:0.9;
-}
-
-.result{
+.card{
     background:#222;
-    padding:20px;
-    margin-top:20px;
-    border-radius:8px;
+    border-radius:10px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#FF6B00;
+    margin-top:0;
+}
+
+.card p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#FF6B00;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:60px;
+    color:#888;
 }
 </style>
 
@@ -54,38 +79,45 @@ button:hover{
 
 <body>
 
-<h1>Meta Title & Description Generator</h1>
+<div class="container">
 
-<p>Enter your target keyword and a short description.</p>
+<h1>Free SEO Tools</h1>
 
-<input type="text" id="keyword" placeholder="Example: SEO Company Kerala">
+<p class="subtitle">
+Professional SEO Tools by <strong>Shameeco</strong>
+</p>
 
-<textarea id="description" rows="5" placeholder="Write your page description..."></textarea>
+<div class="grid">
 
-<button onclick="generateMeta()">Generate</button>
+<div class="card">
+<h2>Meta Title Generator</h2>
+<p>Create SEO-friendly meta titles and meta descriptions instantly.</p>
 
-<div class="result">
-<h3>Meta Title</h3>
-<p id="title"></p>
+<a class="btn" href="meta-title-generator/">
+Open Tool
+</a>
 
-<h3>Meta Description</h3>
-<p id="meta"></p>
 </div>
 
-<script>
-function generateMeta(){
+<div class="card">
+<h2>Word Counter</h2>
+<p>Count words, characters and paragraphs for SEO content.</p>
 
-let keyword=document.getElementById("keyword").value;
-let description=document.getElementById("description").value;
+<a class="btn" href="word-counter/">
+Open Tool
+</a>
 
-document.getElementById("title").innerHTML=
-keyword + " | Digital Marketing Agency | Shameeco";
+</div>
 
-document.getElementById("meta").innerHTML=
-description.substring(0,160);
+</div>
 
-}
-</script>
+<div class="footer">
+
+© 2026 Shameeco
+
+</div>
+
+</div>
 
 </body>
 </html>
