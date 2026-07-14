@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Title Generator | Shameeco</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#141414;
+    color:white;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
+
+h1{
+    color:#FF6B00;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #333;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    background:#FF6B00;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.result{
+    background:#222;
+    padding:20px;
+    margin-top:20px;
+    border-radius:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Meta Title & Description Generator</h1>
+
+<p>Enter your target keyword and a short description.</p>
+
+<input type="text" id="keyword" placeholder="Example: SEO Company Kerala">
+
+<textarea id="description" rows="5" placeholder="Write your page description..."></textarea>
+
+<button onclick="generateMeta()">Generate</button>
+
+<div class="result">
+<h3>Meta Title</h3>
+<p id="title"></p>
+
+<h3>Meta Description</h3>
+<p id="meta"></p>
+</div>
+
+<script>
+function generateMeta(){
+
+let keyword=document.getElementById("keyword").value;
+let description=document.getElementById("description").value;
+
+document.getElementById("title").innerHTML=
+keyword + " | Digital Marketing Agency | Shameeco";
+
+document.getElementById("meta").innerHTML=
+description.substring(0,160);
+
+}
+</script>
+
+</body>
+</html>
